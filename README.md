@@ -1,4 +1,4 @@
-# com_nicodevelop_boilerplate
+# com_nicodevelop_taskmator
 
 Projet de base de création d'application avec Flutter
 
@@ -14,9 +14,9 @@ export PATH="$PATH":"$HOME/.pub-cache/bin"
 flutterfire configure
 ```
 
-Remplacer toutes le références de `com_nicodevelop_boilerplate` par votre nom de projet.
+Remplacer toutes le références de `com_nicodevelop_taskmator` par votre nom de projet.
 
-Remplacer toutes le références de `com.nicodevelop.boilerplate` par votre nom de package du projet.
+Remplacer toutes le références de `com.nicodevelop.taskmator` par votre nom de package du projet.
 
 ## Installation et demarrage du serveur
 

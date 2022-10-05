@@ -1,10 +1,10 @@
-import "package:com_nicodevelop_boilerplate/components/authentication/signup/authentication_signup_display_name_component.dart";
-import "package:com_nicodevelop_boilerplate/components/authentication/signup/authentication_signup_email_password_component.dart";
-import "package:com_nicodevelop_boilerplate/config/constants.dart";
-import "package:com_nicodevelop_boilerplate/screens/home_screen.dart";
-import "package:com_nicodevelop_boilerplate/services/create_account/create_account_bloc.dart";
-import "package:com_nicodevelop_boilerplate/utils/notifications.dart";
-import "package:com_nicodevelop_boilerplate/utils/translate.dart";
+import "package:com_nicodevelop_taskmator/components/authentication/signup/authentication_signup_display_name_component.dart";
+import "package:com_nicodevelop_taskmator/components/authentication/signup/authentication_signup_email_password_component.dart";
+import "package:com_nicodevelop_taskmator/config/constants.dart";
+import "package:com_nicodevelop_taskmator/screens/home_screen.dart";
+import "package:com_nicodevelop_taskmator/services/create_account/create_account_bloc.dart";
+import "package:com_nicodevelop_taskmator/utils/notifications.dart";
+import "package:com_nicodevelop_taskmator/utils/translate.dart";
 import "package:flutter/foundation.dart";
 import "package:flutter/material.dart";
 import "package:flutter_bloc/flutter_bloc.dart";

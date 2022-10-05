@@ -1,7 +1,7 @@
 // ignore: depend_on_referenced_packages
 import "package:bloc/bloc.dart";
-import "package:com_nicodevelop_boilerplate/exceptions/standard_exception.dart";
-import "package:com_nicodevelop_boilerplate/repositories/authentication_repository.dart";
+import "package:com_nicodevelop_taskmator/exceptions/standard_exception.dart";
+import "package:com_nicodevelop_taskmator/repositories/authentication_repository.dart";
 import "package:equatable/equatable.dart";
 
 part "login_event.dart";

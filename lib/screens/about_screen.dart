@@ -1,5 +1,5 @@
 import "package:about_screen/about_screen.dart";
-import "package:com_nicodevelop_boilerplate/config/constants.dart";
+import "package:com_nicodevelop_taskmator/config/constants.dart";
 import "package:flutter/material.dart";
 import "package:package_info_plus/package_info_plus.dart";
 

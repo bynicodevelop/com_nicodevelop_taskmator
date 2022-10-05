@@ -1,8 +1,8 @@
 // ignore: depend_on_referenced_packages
 import "package:bloc/bloc.dart";
-import "package:com_nicodevelop_boilerplate/exceptions/standard_exception.dart";
-import "package:com_nicodevelop_boilerplate/models/user_model.dart";
-import "package:com_nicodevelop_boilerplate/repositories/account_repository.dart";
+import "package:com_nicodevelop_taskmator/exceptions/standard_exception.dart";
+import "package:com_nicodevelop_taskmator/models/user_model.dart";
+import "package:com_nicodevelop_taskmator/repositories/account_repository.dart";
 import "package:equatable/equatable.dart";
 
 part "update_account_event.dart";

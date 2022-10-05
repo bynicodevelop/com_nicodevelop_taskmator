@@ -1,4 +1,4 @@
-import "package:com_nicodevelop_boilerplate/screens/settings_screen.dart";
+import "package:com_nicodevelop_taskmator/screens/settings_screen.dart";
 import "package:flutter/material.dart";
 
 class HomeScreen extends StatelessWidget {

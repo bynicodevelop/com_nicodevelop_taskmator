@@ -1,4 +1,4 @@
-package com.nicodevelop.boilerplate
+package com.nicodevelop.taskmator
 
 import io.flutter.embedding.android.FlutterActivity
 

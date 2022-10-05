@@ -1,6 +1,6 @@
 {
-    "name": "com_nicodevelop_boilerplate",
-    "short_name": "com_nicodevelop_boilerplate",
+    "name": "com_nicodevelop_taskmator",
+    "short_name": "com_nicodevelop_taskmator",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

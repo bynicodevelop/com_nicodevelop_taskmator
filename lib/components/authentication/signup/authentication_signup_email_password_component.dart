@@ -1,6 +1,6 @@
-import "package:com_nicodevelop_boilerplate/components/inputs/email/email_input_component.dart";
-import "package:com_nicodevelop_boilerplate/components/inputs/password/password_input_component.dart";
-import "package:com_nicodevelop_boilerplate/utils/translate.dart";
+import "package:com_nicodevelop_taskmator/components/inputs/email/email_input_component.dart";
+import "package:com_nicodevelop_taskmator/components/inputs/password/password_input_component.dart";
+import "package:com_nicodevelop_taskmator/utils/translate.dart";
 import "package:flutter/material.dart";
 
 class AuthenticationSignupEmailPasswordComponent extends StatelessWidget {

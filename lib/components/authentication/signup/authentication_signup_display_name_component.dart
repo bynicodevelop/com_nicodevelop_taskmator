@@ -1,5 +1,5 @@
-import "package:com_nicodevelop_boilerplate/components/inputs/text/text_input_component.dart";
-import "package:com_nicodevelop_boilerplate/utils/translate.dart";
+import "package:com_nicodevelop_taskmator/components/inputs/text/text_input_component.dart";
+import "package:com_nicodevelop_taskmator/utils/translate.dart";
 import "package:flutter/material.dart";
 
 class AuthenticationSignupDisplayNameComponent extends StatelessWidget {

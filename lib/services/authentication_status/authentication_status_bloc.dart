@@ -1,7 +1,7 @@
 // ignore: depend_on_referenced_packages
 import "package:bloc/bloc.dart";
-import "package:com_nicodevelop_boilerplate/models/user_model.dart";
-import "package:com_nicodevelop_boilerplate/repositories/authentication_repository.dart";
+import "package:com_nicodevelop_taskmator/models/user_model.dart";
+import "package:com_nicodevelop_taskmator/repositories/authentication_repository.dart";
 import "package:equatable/equatable.dart";
 
 part "authentication_status_event.dart";
