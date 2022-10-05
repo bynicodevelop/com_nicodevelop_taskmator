@@ -3,7 +3,9 @@ import "package:cloud_functions/cloud_functions.dart";
 import "package:com_nicodevelop_taskmator/models/ready_start_model.dart";
 import "package:com_nicodevelop_taskmator/repositories/account_repository.dart";
 import "package:com_nicodevelop_taskmator/repositories/authentication_repository.dart";
+import "package:com_nicodevelop_taskmator/repositories/task_repository.dart";
 import "package:com_nicodevelop_taskmator/repositories/upload_repository.dart";
+import "package:com_nicodevelop_taskmator/services/add_task/add_task_bloc.dart";
 import "package:com_nicodevelop_taskmator/services/authentication_status/authentication_status_bloc.dart";
 import "package:com_nicodevelop_taskmator/services/bootstrap/bootstrap_bloc.dart";
 import "package:com_nicodevelop_taskmator/services/create_account/create_account_bloc.dart";
@@ -51,6 +53,11 @@ class ServiceFactory extends StatelessWidget {
       firebaseStorage: firebaseStorage,
     );
 
+    final TaskRepository taskRepository = TaskRepository(
+      firebaseAuth: firebaseAuth,
+      firebaseFirestore: firebaseFirestore,
+    );
+
     return MultiBlocProvider(
       providers: [
         BlocProvider<BootstrapBloc>(
@@ -95,6 +102,11 @@ class ServiceFactory extends StatelessWidget {
         BlocProvider<UploadFileBloc>(
           create: (context) => UploadFileBloc(
             uploadRepository: uploadRepository,
+          ),
+        ),
+        BlocProvider<AddTaskBloc>(
+          create: (context) => AddTaskBloc(
+            taskRepository: taskRepository,
           ),
         ),
       ],

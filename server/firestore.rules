@@ -8,6 +8,10 @@ service cloud.firestore {
     match /users/{userId} {
       allow update, create: if request.auth.uid == userId;
       allow get: if request.auth != null;
+
+      match /tasks/{taskId} {
+        allow create: if request.auth.uid == userId;
+      }
     }
 
     match /discussions/{chatId} {

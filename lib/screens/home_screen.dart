@@ -1,4 +1,5 @@
 import "package:com_nicodevelop_taskmator/screens/settings_screen.dart";
+import "package:com_nicodevelop_taskmator/screens/task_editor_screen.dart";
 import "package:flutter/material.dart";
 
 class HomeScreen extends StatelessWidget {
@@ -21,7 +22,37 @@ class HomeScreen extends StatelessWidget {
           ),
         ],
       ),
-      body: Container(),
+      body: ListView(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "ToDay",
+                style: Theme.of(context).textTheme.headline4,
+              ),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "Tomorrow",
+                style: Theme.of(context).textTheme.headline4,
+              ),
+            ],
+          ),
+        ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () async => Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const TaskEditorScreen(),
+          ),
+        ),
+        child: const Icon(Icons.add),
+      ),
     );
   }
 }
