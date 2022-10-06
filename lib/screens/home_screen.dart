@@ -1,9 +1,26 @@
+import "package:com_nicodevelop_taskmator/config/constants.dart";
 import "package:com_nicodevelop_taskmator/screens/settings_screen.dart";
 import "package:com_nicodevelop_taskmator/screens/task_editor_screen.dart";
 import "package:flutter/material.dart";
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
+
+  Future<void> _showBottomSheet(BuildContext context) async {
+    showModalBottomSheet(
+      context: context,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(
+          top: Radius.circular(
+            kDefaultPadding,
+          ),
+        ),
+      ),
+      builder: (context) {
+        return const TaskEditorScreen();
+      },
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -45,12 +62,7 @@ class HomeScreen extends StatelessWidget {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () async => Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => const TaskEditorScreen(),
-          ),
-        ),
+        onPressed: () async => _showBottomSheet(context),
         child: const Icon(Icons.add),
       ),
     );

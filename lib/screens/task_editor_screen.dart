@@ -15,52 +15,50 @@ class _TaskEditorScreenState extends State<TaskEditorScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.all(
-          kDefaultPadding,
-        ),
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                "Que voulez-vous faire ?",
-                style: Theme.of(context).textTheme.headline4,
-              ),
-              TextField(
-                controller: _taskNameController,
-                maxLines: 3,
-              ),
-              const SizedBox(
-                height: kDefaultPadding,
-              ),
-              SizedBox(
-                width: double.infinity,
-                child: BlocListener<AddTaskBloc, AddTaskState>(
-                  listener: (context, state) {
-                    print(state);
-                    if (state is AddTaskSuccessState) {
-                      Navigator.of(context).pop();
-                    }
-                  },
-                  child: ElevatedButton(
-                    onPressed: () {
-                      if (_taskNameController.text.isNotEmpty) {
-                        context.read<AddTaskBloc>().add(
-                              OnAddTaskEvent(
-                                taskName: _taskNameController.text,
-                              ),
-                            );
-                      }
-                    },
-                    child: const Text("Ajouter"),
-                  ),
-                ),
-              ),
-            ],
+    return Padding(
+      padding: const EdgeInsets.symmetric(
+        horizontal: kDefaultPadding * 2,
+        vertical: kDefaultPadding * 3,
+      ),
+      child: Wrap(
+        children: [
+          Text(
+            "Que voulez-vous faire ?",
+            style: Theme.of(context).textTheme.headline4,
           ),
-        ),
+          Padding(
+            padding: const EdgeInsets.only(
+              bottom: kDefaultPadding * 2,
+            ),
+            child: TextField(
+              controller: _taskNameController,
+              maxLines: 3,
+            ),
+          ),
+          SizedBox(
+            width: double.infinity,
+            height: 50,
+            child: BlocListener<AddTaskBloc, AddTaskState>(
+              listener: (context, state) {
+                if (state is AddTaskSuccessState) {
+                  Navigator.of(context).pop();
+                }
+              },
+              child: ElevatedButton(
+                onPressed: () {
+                  if (_taskNameController.text.isNotEmpty) {
+                    context.read<AddTaskBloc>().add(
+                          OnAddTaskEvent(
+                            taskName: _taskNameController.text,
+                          ),
+                        );
+                  }
+                },
+                child: const Text("Ajouter"),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
